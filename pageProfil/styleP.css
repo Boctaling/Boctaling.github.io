@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'mont_bold';
+    src: url('../font/montserrat/montserrat-bold-webfont.woff2') format('woff2'),
+    url('../font/montserrat/montserrat-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'comfor_regul';
+    src: url('../font/comfortaa/comfortaa_regular.woff2') format('woff2'),
+    url('../font/comfortaa/comfortaa_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #043775;
+    color: #FCF6F3;
+    font-family: 'comfor_regul', arial, sans-serif;
+    font-size: larger;
+}
+
+a:link, a:visited{
+    color: #FCF6F3;
+    text-decoration: none;
+}
+
+/* ---------------------- Header ---------------------- */
+header {
+    background-color: #043775;
+    position: sticky;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'mont_bold', arial, sans-serif;
+}
+
+header ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+header li {
+    list-style: none;
+    font-family: 'comfor_regul', arial, sans-serif;
+    margin-right: 50px;
+    font-size: 20px;
+
+}
+
+header img{
+    margin: 0 20px 0 0;
+    width: 40px;
+    height: 40px;
+}
+
+header h1{
+    margin: 0 0 0 20px;
+}
+
+/* ---------------------- Main ---------------------- */
+main {
+    background-color: #0A0F27;
+    padding: 20px 50px; 
+    font-family: 'comfor_regul', arial, sans-serif;
+}
+
+main h1{
+    margin: 20px 0;
+    font-family: 'mont_bold', arial, sans-serif;
+    text-align: center;
+}
+
+/* ---------- A propos ---------- */
+
+main h1+section>h2+div{
+    display: flex;
+    flex-direction: row;
+}
+
+main h1+section div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 0 0 30px;
+    padding: 20px;
+    background-color: #001952;
+    border-radius: 20px ;
+}
+
+main section div p{
+    margin: 0;
+    text-align: justify;
+}
+
+main section>h2+div div>p+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin:0 ;
+}
+
+/* ---------- Autre ---------- */
+main article{
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #001952;
+    border-radius: 20px ;
+}
+
+main article>div{
+    display: flex;
+    flex-direction: row;
+}
+
+main article>div>a+div, main article>div>img+div{
+    margin: 0 30px;
+}
+
+main article div div ul{
+    margin: 0;
+}
+
+main nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main nav ul li, main nav p{
+    background-color: #12769E;
+    color: #0A0F27;
+    border-radius: 20px;
+    padding: 5px 20px;
+    text-align: center;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: rgba(242,242,242,0.15);
+    border-width: 0px 1px 1px 0px;
+    list-style: none;
+    width: 35%;
+}
+
+main nav a:link, main nav a:visited{
+    color: #0A0F27;
+}
+
+/* ------------------------ Footer ------------------------ */
+footer {
+    background-color: #043775;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 20px 40px;
+}
+
+footer h3{
+    margin: 0 0 0 20px;
+    font-family: 'mont_bold', arial, sans-serif;
+}
+
+footer ul{
+    list-style: none;
+    font-family: 'comfor_regul', arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+    
+}
+
+footer a:link, footer a:visited{
+    color: #FCF6F3;
+    text-decoration: none;
+}
+
+footer hr{
+	height: 200px;
+    border-radius: 100px;
+    margin: 0 15%;
+    color: #FCF6F3;
+}

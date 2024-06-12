@@ -83,10 +83,10 @@ main h4{
 }
 
 main p{
-    margin: 10px 0 0 0;
+    margin: 10px 0;
 }
 
-main section h2+div, main section h2+ul{
+main section h2+div, main section ul, main section figure{
     margin: 20px 0;
     padding: 20px;
     background-color: #001952;
@@ -104,7 +104,7 @@ main section+div{
     justify-content: space-between;
 }
 
-main section p+p{
+main section a{
     background-color: #12769E;
     color: #0A0F27;
     border-radius: 20px;
@@ -114,8 +114,37 @@ main section p+p{
     border-style: solid;
     border-color: rgba(242,242,242,0.15);
     border-width: 0px 1px 1px 0px;
+    width: 180px;
+    text-decoration: none;
+}
+
+/* Outil Langage */
+main figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline; 
+}
+
+main img{
+    height: 125px;
+}
+
+main figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Livrable*/
+main nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main nav li{
     list-style: none;
-    width: 25%;
 }
 
 /* ------------------------ Footer ------------------------ */

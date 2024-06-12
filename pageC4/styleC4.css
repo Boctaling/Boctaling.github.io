@@ -67,57 +67,44 @@ header h1{
 /* ------------------------ Main ------------------------ */
 main {
     background-color: #0A0F27;
-    padding: 20px 50px; 
-    font-family: 'comfor_regul', arial, sans-serif;
+    padding: 20px 50px;
 }
 
 main h1{
-    margin: 20px 0 40px 0;
-    font-family: 'mont_bold', arial, sans-serif;
     text-align: center;
 }
 
-main a:link, main a:visited{
-    text-decoration: none;
-    color: #FCF6F3;
+main h1+h2{
+    text-align: center;
 }
 
-main section>article+article+article+article>p a:link, main section>article+article+article+article>p a:visited{
-    color: #0A0F27;
-}
-
-main hr{
+main h4{
     margin: 0;
-    color: #FCF6F3;
-    border-radius: 100px;
 }
 
-main section{
-    background-color: #001952;
-    border-radius: 20px;
-    margin: 0 20px;
+main p{
+    margin: 10px 0;
+}
+
+main section h2+div, main section h2+ul{
+    margin: 20px 0;
     padding: 20px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    background-color: #001952;
+    border-radius: 20px ;
 }
 
-main h1+div{
+main section h2+ul{
+    padding-left: 40px;
+}
+
+main section+div{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-main div>section h3,main div>section p{
-    margin: 0;
-}
-
-main div>section article{
-    margin: 20px 0;
-}
-
-main section>article+article+article+article>p{
+main section a{
     background-color: #12769E;
     color: #0A0F27;
     border-radius: 20px;
@@ -127,50 +114,18 @@ main section>article+article+article+article>p{
     border-style: solid;
     border-color: rgba(242,242,242,0.15);
     border-width: 0px 1px 1px 0px;
-    width: 35%;
-    height: auto;
-    font-size: larger;
-}
-/* Detail */
-
-/* E-mail */
-main hr+section{
-    width: 150%;
+    width: 180px;
+    text-decoration: none;
 }
 
-main section>div{
+main img{
+    height: 125px;
+}
+
+.outil_langage{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-main section>div article{
-    width: 47%;
-}
-
-main hr+section article input, main hr+section article textarea{
-    background-color: #FCF6F3;
-    border-radius: 20px;
-    width: 100%;
-    height: 40px;
-    margin: 10px 0 0 0;
-    padding: 5px 0 5px 10px;
-    border-collapse: collapse;
-    border-style: solid;
-    border-color: rgba(242,242,242,0.15);
-    border-width: 0px 1px 1px 0px;
-    color: #0A0F27;
-    font-family: 'comfor_regul', arial, sans-serif;
-    font-size: large;
-}
-
-main hr+section article textarea{
-    height: 80px;
-}
-
-main hr+section>article+article+article+article{
-    display: flex;
-    flex-direction: row-reverse;
+    padding: 20px;
 }
 
 /* ------------------------ Footer ------------------------ */

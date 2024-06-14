@@ -86,7 +86,7 @@ main p{
     margin: 10px 0;
 }
 
-main section h2+div, main section h2+ul{
+main section h2+div, main section ul{
     margin: 20px 0;
     padding: 20px;
     background-color: #001952;
@@ -118,6 +118,7 @@ main section a{
     text-decoration: none;
 }
 
+/* Outil Langage */
 main img{
     height: 125px;
     margin-right: 20px;
@@ -128,6 +129,24 @@ main img{
     flex-direction: row;
     padding: 20px;
 }
+
+/* Livrable*/
+main nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main nav a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main nav li{
+    list-style: none; 
+}
+
 /* ------------------------ Footer ------------------------ */
 footer {
     background-color: #043775;

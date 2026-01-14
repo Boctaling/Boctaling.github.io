@@ -1,0 +1,517 @@
+@font-face {
+    font-family: 'mont_bold';
+    src: url('font/montserrat/montserrat-bold-webfont.woff2') format('woff2'),
+        url('font/montserrat/montserrat-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'comfor_regul';
+    src: url('font/comfortaa/comfortaa_regular.woff2') format('woff2'),
+        url('font/comfortaa/comfortaa_regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$noir: #120D16;
+$blanc: #fafbff;
+$rouge: #DC343B;
+$bleuFluo: #0003D8;
+$orange: #FF2400;
+$vert: #00FF8A;
+$bleuNoir: #0A0F27;
+$bleuFonce: #001952;
+$bleuMarine: #043775;
+$bleuLapis: #12769E;
+
+@mixin zone {
+    background-color: $blanc;
+    // filter: brightness(0.95);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+@mixin trait {
+    border: none;
+    height: 2px;
+    background-color: $bleuFluo;
+    // border-radius: 100%;
+    border-radius: 20em;
+}
+
+@mixin bouton {
+    background-color: $blanc;
+    // filter: brightness(1.05);
+    padding: 10px 20px;
+    text-align: center;
+    list-style: none;
+    width: 15em;
+
+    border: {
+        color: $noir;
+        radius: 20px;
+        collapse: collapse;
+        style: solid;
+        width: 1px;
+    }
+}
+
+// ---------- Générale ----------
+body {
+    color: $noir;
+    background-color: $blanc;
+    padding: 1em 2em;
+    margin: 0;
+    font-family: 'comfor_regul', arial, sans-serif;
+}
+
+a {
+    color: $noir;
+    text-decoration: none;
+}
+
+hr {
+    @include trait;
+}
+
+p {
+    margin: 5px;
+    text-align: justify;
+}
+
+img {
+    max-height: 10em;
+}
+
+button {
+    @include bouton;
+}
+
+// ---------- Header ----------
+header {
+    >div {
+        font-family: 'mont_bold', arial, sans-serif;
+        position: sticky;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 3em;
+
+        >ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            >li {
+                list-style: none;
+                font-family: 'comfor_regul', arial, sans-serif;
+                margin-left: 50px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// ---------- Footer ----------
+footer {
+    margin-top: 20px;
+
+    h3 {
+        margin: 0;
+        font-family: 'mont_bold', arial, sans-serif;
+    }
+
+    p {
+        text-align: center;
+        margin: 0.5em 0 0 0;
+    }
+
+    ul {
+        list-style: none;
+        text-decoration: none;
+        font-family: 'comfor_regul', arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 75%;
+    }
+
+    >div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        // padding: 20px 40px;
+        >nav {
+            width: 20em;
+        }
+
+        >hr {
+            height: auto;
+            width: 2px;
+            margin: 0;
+        }
+    }
+}
+
+// ---------- Main ----------
+
+main {
+    h1 {
+        margin: 30px 0;
+        font-family: 'mont_bold', arial, sans-serif;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: 'mont_bold', arial, sans-serif;
+    }
+
+    hr {
+        width: 30%;
+        margin-left: 0;
+    }
+
+    #formations,
+    #experiences,
+    #interets {
+        article {
+            @include zone;
+            margin: 20px 0;
+
+            >div {
+                display: flex;
+                flex-direction: row;
+
+                div {
+                    margin: 0 30px;
+                }
+            }
+        }
+    }
+
+    ul {
+        margin: 5px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li {
+            @include bouton;
+        }
+    }
+
+    section {
+        margin: 0 -2em;
+        padding: 1em 2em 2em 2em;
+    }
+}
+
+// ---------- Autre ----------
+#propos {
+    div {
+        display: flex;
+        flex-direction: row;
+
+        h2 {
+            margin: 10px 0 0 0;
+        }
+
+        div {
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0 0 0 30px;
+            padding: 20px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            @include zone;
+            list-style: none;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+        }
+    }
+
+    img {
+        border: solid 2px $bleuFluo;
+        border-radius: 100%;
+        max-height: 20em;
+    }
+}
+
+#competences {
+    background-color: $bleuLapis;
+
+    li {
+        list-style: none;
+        margin-right: 2em;
+        align-content: center;
+    }
+
+    .carousel {
+        overflow: hidden;
+        width: 100%;
+        /* Ajustez selon vos besoins */
+    }
+
+    .carousel-inner {
+        display: flex;
+        animation: scroll 25s linear infinite;
+
+        li img {
+            width: 2.5em;
+            /* Les images prendront toute la largeur de leur conteneur */
+            height: auto;
+            /* Maintient le ratio d'aspect */
+            max-height: 300px;
+            /* Ajustez cette valeur selon vos besoins */
+            object-fit: cover;
+            /* Cela permet de remplir l'espace sans déformer l'image */
+        }
+    }
+
+    .carousel-item {
+        min-width: 100%;
+        /* Chaque diapositive prend toute la largeur */
+        transition: transform 0.5s ease;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .carousel:hover .carousel-inner {
+        animation-play-state: paused;
+    }
+}
+
+#experiences {
+    background-color: $bleuMarine;
+
+    h2 {
+        color: $blanc;
+    }
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    hr {
+        width: 2px;
+        height: auto;
+        margin: 0;
+    }
+
+    section {
+        @include zone;
+        margin: 0 20px;
+        // width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    form {
+        @include zone;
+        width: 70%;
+        margin-left: 20px;
+
+        textarea:focus,
+        input:focus {
+            background-color: $blanc;
+            transform: scale(1.01);
+            box-shadow: 13px 13px 100px #969696, -13px -13px 100px $blanc;
+            padding: 10px;
+
+            font: {
+                family: 'comfor_regul', arial, sans-serif;
+                size: medium;
+            }
+        }
+
+        textarea,
+        input {
+            // background-color: $blanc;
+            // width: 100%;
+            // height: 40px;
+            // margin: 10px 0;
+            // padding: 5px 0 5px 10px;
+            // border: {
+            //     collapse: collapse;
+            //     style: solid;
+            //     color: $noir;
+            //     width: 0px 1px 1px 0px;
+            //     radius: 10px;
+            // }
+            // font: {
+            //     family: 'comfor_regul', arial, sans-serif;
+            //     size: large;
+            // }
+            width: 95%;
+            height: 40px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            margin: 10px 0 10px 5px;
+            padding: 5px 10px;
+            background-color: $blanc;
+            filter: brightness(0.95);
+            box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+            transition: 300ms ease-in-out;
+
+            font: {
+                family: 'comfor_regul', arial, sans-serif;
+                size: large;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            background-color: $vert;
+        }
+    }
+}
+
+#retour {
+    text-align: center;
+    margin: 20px 0;
+    @include bouton;
+
+    &:hover {
+        background-color: $noir;
+        color: $blanc;
+    }
+}
+
+#id_matiere {
+    text-align: center;
+}
+
+#id_competence {
+    @include zone;
+    text-align: center;
+
+    p {
+        text-align: center;
+    }
+}
+
+#section_resume {
+    background-color: $bleuLapis;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+#section_acquis {
+    color: $blanc;
+    background-color: $bleuFonce;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+#id_texte_resume {
+    @include zone;
+}
+
+#id_liste_livrables {
+    @include zone;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+        background-color: #12769E;
+        color: #0A0F27;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        margin: 10px;
+        width: 11em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+#liste-projets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+
+    h2 {
+        margin: 0 0 10px 0;
+    }
+
+    a {
+        @include zone;
+        background-color: $bleuLapis;
+        color: $blanc;
+        // width: 15em;
+        // height: 10em;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        p {
+            text-align: start;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            padding: 10px;
+
+            li {
+                margin: 0 5px;
+            }
+        }
+
+        #listeCompetence {
+            @include zone;
+            color: $noir;
+        }
+
+        &:hover {
+            background-color: $bleuFonce;
+        }
+    }
+}
